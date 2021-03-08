@@ -9,9 +9,11 @@ function arrayToList(array) {
 }
 
 function listToArray(list) {
+  let output = [];
   for (let node = list; node; node = node.rest) {
-    console.log(node.value);
+    output.push(node.value);
   }
+  return output;
 }
 
 console.log(arrayToList([10, 20, 30]));
